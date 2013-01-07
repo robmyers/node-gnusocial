@@ -1,9 +1,13 @@
 {
 	"name": "identica",
-	"description":"Utilities and a wrapper for using the identi.ca Twitter-compatible API from node",
+	"description": "Utilities and a wrapper for using the identi.ca Twitter-compatible API from node",
 	"author": {
 		"name":"David Pearson",
 		"url":"http://dpearson.me"
+	},
+	"repository": {
+		"type":"git",
+		"url":"http://github.com/dpearson/node-identi.ca.git"
 	},
 	"version": "0.0.1",
 
@@ -12,7 +16,14 @@
 		"request":"2.12.0"
 	},
 
+	"files": [
+		"getaccesstoken.js",
+		"identica.js",
+		"package.json",
+		"README.md"
+	],
 	"bin": {
 		"getaccesstoken.js":"getaccesstoken"
-	}
+	},
+	"main": "identica.js"
 }
