@@ -1,0 +1,18 @@
+{
+	"name": "identica",
+	"description":"Utilities and a wrapper for using the identi.ca Twitter-compatible API from node",
+	"author": {
+		"name":"David Pearson",
+		"url":"http://dpearson.me"
+	},
+	"version": "0.0.1",
+
+	"dependencies": {
+		"open":"0.0.2",
+		"request":"2.12.0"
+	},
+
+	"bin": {
+		"getaccesstoken.js":"getaccesstoken"
+	}
+}
