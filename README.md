@@ -6,7 +6,7 @@ This is pretty much a collection of random code that I found useful. Your mileag
 
 ### Setup ###
 
-Run `npm install` and you're golden.
+Run `npm install identica` and you're golden.
 
 ### Using the identi.ca API ###
 
@@ -25,7 +25,7 @@ First, you need to [create](http://identi.ca/settings/oauthapps/new) an applicat
 
 Then, you can use the `getaccesstoken.js` script from this repository to grab the necessary token and secret. Just run the script, supplying your consumer key and secret as command line arguments, like:
 
-		node getaccesstoken.js CONSUMER_KEY CONSUMER_SECRET
+		node node_modules/identica/getaccesstoken.js CONSUMER_KEY CONSUMER_SECRET
 
 When run, a browser window should pop up and ask you to log in to identi.ca and approve the application. Do what it says and wait a moment, and your access token and secret should be displayed in the same browser window.
 
