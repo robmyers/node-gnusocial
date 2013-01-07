@@ -35,9 +35,17 @@ While ntwitter supports (I use the term loosely; it isn't actually advertised an
 
 ### What works with identi.ca + ntwitter ###
 
-Everything supported by the [Twitter-compatible API](http://status.net/wiki/Twitter-compatible_API) should work. However, only authentication and posting status updates (including status updates with locations) has been explicitly tested.
+Everything supported by the [Twitter-compatible API](http://status.net/wiki/Twitter-compatible_API) should work. However, only the following have been explicitly tested:
 
-*Note: identi.ca, as far as I can tell, does not support the streaming APIs.*
+ * Authentication
+ * Posting status updates
+ * Getting public, user, mentions, and home timelines
+ * Searching
+
+### What doesn't work ###
+
+ * Stream-related functions
+ * retweetedToMe and retweetedByMe
 
 ### TODO ###
 
