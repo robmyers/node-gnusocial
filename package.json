@@ -13,7 +13,8 @@
 
 	"dependencies": {
 		"open":"0.0.2",
-		"request":"2.12.0"
+		"request":"2.12.0",
+		"ntwitter":"0.5.0"
 	},
 
 	"files": [
