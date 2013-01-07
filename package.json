@@ -9,7 +9,7 @@
 		"type":"git",
 		"url":"http://github.com/dpearson/node-identi.ca.git"
 	},
-	"version": "0.0.1",
+	"version": "0.0.2",
 
 	"dependencies": {
 		"open":"0.0.2",
@@ -23,8 +23,5 @@
 		"package.json",
 		"README.md"
 	],
-	"bin": {
-		"getaccesstoken.js":"getaccesstoken"
-	},
 	"main": "identica.js"
 }
