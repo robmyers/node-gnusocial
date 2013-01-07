@@ -8,6 +8,17 @@ This is pretty much a collection of random code that I found useful. Your mileag
 
 Run `npm install` and you're golden.
 
+### Using the identi.ca API ###
+
+*If you need to generate tokens, see [below](https://github.com/dpearson/node-identi.ca#generating-access-tokens)*
+
+It's fairly easy to get started; just plug your keys and secrets into the following code:
+
+    var identica=require("identica");
+    var i=identica({consumer_key:"CONSUMER_KEY", consumer_secret:"CONSUMER_SECRET", access_token_key:"ACCESS_TOKEN_KEY", access_token_secret:"ACCESS_TOKEN_SECRET"});
+
+In the above snippet, `i` is an instance of the `twitter` object from [ntwitter](https://github.com/AvianFlu/ntwitter). To get started, there is some information on the REST API interface [in the ntwitter README](https://github.com/AvianFlu/ntwitter#rest-api); for a more detailed listing of the available functions, have a look [at the source](https://github.com/AvianFlu/ntwitter/blob/master/lib/twitter.js#L450).
+
 ### Generating access tokens ###
 
 First, you need to [create](http://identi.ca/settings/oauthapps/new) an application (or use an [existing](http://identi.ca/settings/oauthapps) one).
@@ -17,21 +28,6 @@ Then, you can use the `getaccesstoken.js` script from this repository to grab th
 		node getaccesstoken.js CONSUMER_KEY CONSUMER_SECRET
 
 When run, a browser window should pop up and ask you to log in to identi.ca and approve the application. Do what it says and wait a moment, and your access token and secret should be displayed in the same browser window.
-
-### Using identi.ca with ntwitter ###
-
-While ntwitter supports (I use the term loosely; it isn't actually advertised anywhere) proxies and third-party services, it's not the most graceful at doing so. There are basically two ways to get it working:
-
-1. Given an already-created `Twitter` instance `twit`, the following code'll do the trick:
-
-		twit.options["request_token_url"]="https://identi.ca/api/oauth/request_token";
-		twit.options["access_token_url"]="https://identi.ca/api/oauth/access_token";
-		twit.options["authenticate_url"]="https://identi.ca/api/oauth/authorize";
-		twit.options["authorize_url"]="https://identi.ca/api/oauth/authorize";
-		twit.options["rest_base"]="https://identi.ca/api";
-		twit.options["search_base"]="http://identi.ca/api";
-
-2. If you're willing to keep a copy of the ntwitter source in your app, you can edit the URLs in ntwitter/lib/keys.js.
 
 ### What works with identi.ca + ntwitter ###
 
