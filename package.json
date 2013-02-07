@@ -23,5 +23,7 @@
 		"package.json",
 		"README.md"
 	],
-	"main": "identica.js"
+	"bin":{
+		"identica":"identica.js"
+	}
 }
