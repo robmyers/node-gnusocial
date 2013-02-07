@@ -9,7 +9,7 @@
 		"type":"git",
 		"url":"http://github.com/dpearson/node-identi.ca.git"
 	},
-	"version": "0.0.4",
+	"version": "0.0.5",
 
 	"dependencies": {
 		"open":"0.0.3",
