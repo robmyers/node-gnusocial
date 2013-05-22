@@ -1,5 +1,7 @@
 ## Various Tools for Identi.ca + Node.js ##
 
+** Support for this project is discontinued due to upcoming changes to the identi.ca platform. Read more [here](http://dpearson.me/blog/posts/Ending+support+for+node-identica.html) **
+
 I wanted to get [@NFLScoreBot](http://twitter.com/nflscorebot) working with [identi.ca](http://identi.ca). Unfortunately, there's no pre-rolled library, so I kind of hacked this together for use with the excellent [ntwitter](https://github.com/AvianFlu/ntwitter).
 
 This is pretty much a collection of random code that I found useful. Your mileage may vary.
