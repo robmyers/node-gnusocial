@@ -1,29 +1,22 @@
 {
-	"name": "identica",
-	"description": "Utilities and a wrapper for using the identi.ca Twitter-compatible API from node",
-	"author": {
-		"name":"David Pearson",
-		"url":"http://dpearson.me"
-	},
-	"repository": {
-		"type":"git",
-		"url":"http://github.com/dpearson/node-identi.ca.git"
-	},
-	"version": "0.0.5",
-
-	"dependencies": {
-		"open":"0.0.3",
-		"request":"2.12.0",
-		"ntwitter":"0.5.0"
-	},
-
-	"files": [
-		"getaccesstoken.js",
-		"identica.js",
-		"package.json",
-		"README.md"
-	],
-	"bin":{
-		"identica":"identica.js"
-	}
-}
+  "name": "gnusocial",
+  "description": "Twitter Rest API client for node",
+  "version": "0.0.8",
+  "author": "Rob Myers",
+  "keywords": [
+    "gnusocial",
+    "api",
+    "rest",
+    "oauth"
+  ],
+  "dependencies": {
+    "oauth": "0.9.9"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "main": "./lib/gnusocial.js",
+  "repository": {
+    "type": "git",
+    "url": "http://gitorious.org/robmyers/gnusocial"
+  },

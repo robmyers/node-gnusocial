@@ -1,4 +1,5 @@
 /* Copyright 2012-2013 David Pearson.
+ * Copyright 2014 Rob Myers
  *
  * BSD License.
  */
@@ -9,18 +10,19 @@ var querystring=require("querystring");
 var request=require("request");
 var url=require("url");
 
-var callback="http://localhost:1234/";
-var reqTokenURL="https://identi.ca/api/oauth/request_token";
-var accessTokenURL="https://identi.ca/api/oauth/access_token";
-var authURL="https://identi.ca/api/oauth/authorize";
-
-if (process.argv.length<4) {
-	console.log("USAGE: node getaccesstoken.js CONSUMER_KEY CONSUMER_SECRET");
+if (process.argv.length<5) {
+	console.log("USAGE: node getaccesstoken.js API_ROOT_URL CONSUMER_KEY CONSUMER_SECRET");
 	return;
 }
 
-var consumerKey=process.argv[2];
-var consumerSecret=process.argv[3];
+var apiRoot=process.argv[2];
+var consumerKey=process.argv[3];
+var consumerSecret=process.argv[4];
+
+var callback="http://localhost:1234/";
+var reqTokenURL=apiRoot+"/oauth/request_token";
+var accessTokenURL=apiRoot+"/oauth/access_token";
+var authURL=apiRoot+"/oauth/authorize";
 
 var oauthToken="";
 var oauthTokenSecret="";
